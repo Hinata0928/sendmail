@@ -8,9 +8,9 @@ from email.mime.base import MIMEBase
 # 邮件对象:
 msg = MIMEMultipart()
 # msg = MIMEText('Hello,send by python...', 'plain', 'utf-8')
-msg['From'] = 'Hintat<Hintat0928@163.com>'
-msg['Subject'] = Header('来自Hintat的问候', 'utf8').encode()
-msg['To'] = 'Hintat<409365364@qq.com>'
+msg['From'] = 'xxx<xxx@xxx.com>'
+msg['Subject'] = Header('来自xxx的问候', 'utf8').encode()
+msg['To'] = 'xxx<xxx@xxx.com>'
 # 邮件正文是MIMEText:
 msg.attach(MIMEText('send with file...', 'plain', 'utf-8'))
 # 添加附件就是加上一个MIMEBase，从本地读取一个图片:
@@ -27,10 +27,10 @@ with open(r'C:\Users\Hintat\Desktop\xbx.jpg', 'rb') as x:
     encoders.encode_base64(mime)
     msg.attach(mime)
 
-from_addr = 'Hintat0928@163.com'
-password = 'lh19900928'
-smtp_server = 'smtp.163.com'
-to_address = '409365364@qq.com'
+from_addr = 'xxxxxx@xxx.com'
+password = 'xxxxxx'
+smtp_server = 'smtp.xxx.com'
+to_address = 'xxxxxx@xxx.com'
 
 server = smtplib.SMTP(smtp_server, 25)
 # server.set_debuglevel(1)
